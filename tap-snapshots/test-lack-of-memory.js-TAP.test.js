@@ -14,6 +14,7 @@ exports[`test/lack-of-memory.js TAP > arrived | T0 1`] = `
     loadedTime: 0,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'RUNNING',
     partitions: 
      [ MemPartition {
@@ -51,6 +52,7 @@ exports[`test/lack-of-memory.js TAP > arrived | T0 1`] = `
     loadedTime: 0,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'RUNNING',
     partitions: 
      [ MemPartition {
@@ -88,6 +90,7 @@ exports[`test/lack-of-memory.js TAP > arrived | T0 1`] = `
     loadedTime: NaN,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'STANDBY',
     partitions: [],
     pcbs: [] } ]
@@ -106,6 +109,7 @@ exports[`test/lack-of-memory.js TAP > arrived | T2 1`] = `
     loadedTime: 0,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'RUNNING',
     partitions: 
      [ MemPartition {
@@ -151,6 +155,7 @@ exports[`test/lack-of-memory.js TAP > arrived | T2 1`] = `
     loadedTime: 2,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'RUNNING',
     partitions: 
      [ MemPartition {
@@ -196,6 +201,7 @@ exports[`test/lack-of-memory.js TAP > arrived | T2 1`] = `
     loadedTime: NaN,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'STANDBY',
     partitions: [],
     pcbs: [] } ]
@@ -210,6 +216,7 @@ exports[`test/lack-of-memory.js TAP > dead | T2 1`] = `
     loadedTime: 0,
     finishedTime: 2,
     cyclingTime: 2,
+    time: 2,
     state: 'FINISHED',
     partitions: [],
     pcbs: null } ]
@@ -224,6 +231,7 @@ exports[`test/lack-of-memory.js TAP > arrived | T3 1`] = `
     loadedTime: 2,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'RUNNING',
     partitions: 
      [ MemPartition {
@@ -261,6 +269,7 @@ exports[`test/lack-of-memory.js TAP > arrived | T3 1`] = `
     loadedTime: NaN,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'STANDBY',
     partitions: [],
     pcbs: [] } ]
@@ -275,6 +284,7 @@ exports[`test/lack-of-memory.js TAP > dead | T3 1`] = `
     loadedTime: 0,
     finishedTime: 2,
     cyclingTime: 2,
+    time: 2,
     state: 'FINISHED',
     partitions: [],
     pcbs: null },
@@ -286,6 +296,7 @@ exports[`test/lack-of-memory.js TAP > dead | T3 1`] = `
     loadedTime: 0,
     finishedTime: 3,
     cyclingTime: 3,
+    time: 1,
     state: 'FINISHED',
     partitions: [],
     pcbs: null } ]
@@ -300,6 +311,7 @@ exports[`test/lack-of-memory.js TAP > arrived | T6 1`] = `
     loadedTime: 6,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'RUNNING',
     partitions: 
      [ MemPartition {
@@ -340,6 +352,7 @@ exports[`test/lack-of-memory.js TAP > dead | T6 1`] = `
     loadedTime: 0,
     finishedTime: 2,
     cyclingTime: 2,
+    time: 2,
     state: 'FINISHED',
     partitions: [],
     pcbs: null },
@@ -351,6 +364,7 @@ exports[`test/lack-of-memory.js TAP > dead | T6 1`] = `
     loadedTime: 0,
     finishedTime: 3,
     cyclingTime: 3,
+    time: 1,
     state: 'FINISHED',
     partitions: [],
     pcbs: null },
@@ -362,6 +376,7 @@ exports[`test/lack-of-memory.js TAP > dead | T6 1`] = `
     loadedTime: 2,
     finishedTime: 6,
     cyclingTime: 6,
+    time: 3,
     state: 'FINISHED',
     partitions: [],
     pcbs: null } ]
@@ -380,6 +395,7 @@ exports[`test/lack-of-memory.js TAP > dead | T7 1`] = `
     loadedTime: 0,
     finishedTime: 2,
     cyclingTime: 2,
+    time: 2,
     state: 'FINISHED',
     partitions: [],
     pcbs: null },
@@ -391,6 +407,7 @@ exports[`test/lack-of-memory.js TAP > dead | T7 1`] = `
     loadedTime: 0,
     finishedTime: 3,
     cyclingTime: 3,
+    time: 1,
     state: 'FINISHED',
     partitions: [],
     pcbs: null },
@@ -402,6 +419,7 @@ exports[`test/lack-of-memory.js TAP > dead | T7 1`] = `
     loadedTime: 2,
     finishedTime: 6,
     cyclingTime: 6,
+    time: 3,
     state: 'FINISHED',
     partitions: [],
     pcbs: null },
@@ -413,6 +431,7 @@ exports[`test/lack-of-memory.js TAP > dead | T7 1`] = `
     loadedTime: 6,
     finishedTime: 7,
     cyclingTime: 6,
+    time: 1,
     state: 'FINISHED',
     partitions: [],
     pcbs: null } ]

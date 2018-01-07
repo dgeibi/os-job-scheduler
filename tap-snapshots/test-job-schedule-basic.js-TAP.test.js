@@ -14,6 +14,7 @@ exports[`test/job-schedule-basic.js TAP > arrived | T0 1`] = `
     loadedTime: 0,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'RUNNING',
     partitions: 
      [ MemPartition {
@@ -62,6 +63,7 @@ exports[`test/job-schedule-basic.js TAP > dead | T1 1`] = `
     loadedTime: 0,
     finishedTime: 1,
     cyclingTime: 1,
+    time: 1,
     state: 'FINISHED',
     partitions: [],
     pcbs: null } ]
@@ -76,6 +78,7 @@ exports[`test/job-schedule-basic.js TAP > arrived | T2 1`] = `
     loadedTime: 2,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'RUNNING',
     partitions: 
      [ MemPartition {
@@ -116,6 +119,7 @@ exports[`test/job-schedule-basic.js TAP > dead | T2 1`] = `
     loadedTime: 0,
     finishedTime: 1,
     cyclingTime: 1,
+    time: 1,
     state: 'FINISHED',
     partitions: [],
     pcbs: null } ]
@@ -134,6 +138,7 @@ exports[`test/job-schedule-basic.js TAP > dead | T4 1`] = `
     loadedTime: 0,
     finishedTime: 1,
     cyclingTime: 1,
+    time: 1,
     state: 'FINISHED',
     partitions: [],
     pcbs: null },
@@ -145,6 +150,7 @@ exports[`test/job-schedule-basic.js TAP > dead | T4 1`] = `
     loadedTime: 2,
     finishedTime: 4,
     cyclingTime: 2,
+    time: 2,
     state: 'FINISHED',
     partitions: [],
     pcbs: null } ]

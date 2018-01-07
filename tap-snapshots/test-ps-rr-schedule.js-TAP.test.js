@@ -22,6 +22,7 @@ exports[`test/ps-rr-schedule.js TAP > ps ready | T0 1`] = `
        loadedTime: 0,
        finishedTime: NaN,
        cyclingTime: NaN,
+       time: 0,
        state: 'RUNNING',
        partitions: 
         [ MemPartition {
@@ -59,6 +60,7 @@ exports[`test/ps-rr-schedule.js TAP > ps ready | T0 1`] = `
        loadedTime: 0,
        finishedTime: NaN,
        cyclingTime: NaN,
+       time: 0,
        state: 'RUNNING',
        partitions: 
         [ MemPartition {
@@ -96,6 +98,7 @@ exports[`test/ps-rr-schedule.js TAP > ps ready | T0 1`] = `
        loadedTime: 0,
        finishedTime: NaN,
        cyclingTime: NaN,
+       time: 0,
        state: 'RUNNING',
        partitions: 
         [ MemPartition {
@@ -140,6 +143,7 @@ exports[`test/ps-rr-schedule.js TAP > ps ready | T3 1`] = `
        loadedTime: 0,
        finishedTime: NaN,
        cyclingTime: NaN,
+       time: 0,
        state: 'RUNNING',
        partitions: 
         [ MemPartition {
@@ -177,6 +181,7 @@ exports[`test/ps-rr-schedule.js TAP > ps ready | T3 1`] = `
        loadedTime: 0,
        finishedTime: NaN,
        cyclingTime: NaN,
+       time: 0,
        state: 'RUNNING',
        partitions: 
         [ MemPartition {
@@ -214,6 +219,7 @@ exports[`test/ps-rr-schedule.js TAP > ps ready | T3 1`] = `
        loadedTime: 0,
        finishedTime: NaN,
        cyclingTime: NaN,
+       time: 3,
        state: 'RUNNING',
        partitions: 
         [ MemPartition {
@@ -258,6 +264,7 @@ exports[`test/ps-rr-schedule.js TAP > ps ready | T5 1`] = `
        loadedTime: 0,
        finishedTime: NaN,
        cyclingTime: NaN,
+       time: 0,
        state: 'RUNNING',
        partitions: 
         [ MemPartition {
@@ -303,6 +310,7 @@ exports[`test/ps-rr-schedule.js TAP > ps ready | T5 1`] = `
        loadedTime: 0,
        finishedTime: NaN,
        cyclingTime: NaN,
+       time: 3,
        state: 'RUNNING',
        partitions: 
         [ MemPartition {
@@ -363,6 +371,7 @@ exports[`test/ps-rr-schedule.js TAP > ps ready | T8 1`] = `
        loadedTime: 0,
        finishedTime: NaN,
        cyclingTime: NaN,
+       time: 3,
        state: 'RUNNING',
        partitions: 
         [ MemPartition {
@@ -408,6 +417,7 @@ exports[`test/ps-rr-schedule.js TAP > ps ready | T8 1`] = `
        loadedTime: 0,
        finishedTime: NaN,
        cyclingTime: NaN,
+       time: 3,
        state: 'RUNNING',
        partitions: 
         [ MemPartition {
@@ -468,6 +478,7 @@ exports[`test/ps-rr-schedule.js TAP > ps ready | T10 1`] = `
        loadedTime: 0,
        finishedTime: NaN,
        cyclingTime: NaN,
+       time: 3,
        state: 'RUNNING',
        partitions: 
         [ MemPartition {

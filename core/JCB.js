@@ -11,11 +11,18 @@ class JCB {
   constructor({ arriveTime, jid, memSize, needTime }) {
     this.jid = maybeUndefined(jid, getJID)
     this.memSize = memSize
+    /** 需要时间 */
     this.needTime = needTime
+    /** 到达时间 */
     this.arriveTime = arriveTime
+    /** 装入时间 */
     this.loadedTime = NaN
+    /** 完成时间 */
     this.finishedTime = NaN
+    /** 周转时间 */
     this.cyclingTime = NaN
+    /** 实际运行时间 */
+    this.time = 0
     this.state = JCB.stateType.STANDBY
     this.partitions = []
     this.pcbs = []

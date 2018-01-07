@@ -14,6 +14,7 @@ exports[`test/job-schedule-degree-2.js TAP > arrived | T0 1`] = `
     loadedTime: 0,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'RUNNING',
     partitions: 
      [ MemPartition {
@@ -51,6 +52,7 @@ exports[`test/job-schedule-degree-2.js TAP > arrived | T0 1`] = `
     loadedTime: 0,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'RUNNING',
     partitions: 
      [ MemPartition {
@@ -88,6 +90,7 @@ exports[`test/job-schedule-degree-2.js TAP > arrived | T0 1`] = `
     loadedTime: NaN,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'STANDBY',
     partitions: [],
     pcbs: [] } ]
@@ -106,6 +109,7 @@ exports[`test/job-schedule-degree-2.js TAP > arrived | T3 1`] = `
     loadedTime: 0,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'RUNNING',
     partitions: 
      [ MemPartition {
@@ -151,6 +155,7 @@ exports[`test/job-schedule-degree-2.js TAP > arrived | T3 1`] = `
     loadedTime: 3,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'RUNNING',
     partitions: 
      [ MemPartition {
@@ -199,6 +204,7 @@ exports[`test/job-schedule-degree-2.js TAP > dead | T3 1`] = `
     loadedTime: 0,
     finishedTime: 3,
     cyclingTime: 3,
+    time: 3,
     state: 'FINISHED',
     partitions: [],
     pcbs: null } ]
@@ -213,6 +219,7 @@ exports[`test/job-schedule-degree-2.js TAP > arrived | T5 1`] = `
     loadedTime: 3,
     finishedTime: NaN,
     cyclingTime: NaN,
+    time: 0,
     state: 'RUNNING',
     partitions: 
      [ MemPartition {
@@ -261,6 +268,7 @@ exports[`test/job-schedule-degree-2.js TAP > dead | T5 1`] = `
     loadedTime: 0,
     finishedTime: 3,
     cyclingTime: 3,
+    time: 3,
     state: 'FINISHED',
     partitions: [],
     pcbs: null },
@@ -272,6 +280,7 @@ exports[`test/job-schedule-degree-2.js TAP > dead | T5 1`] = `
     loadedTime: 0,
     finishedTime: 5,
     cyclingTime: 5,
+    time: 2,
     state: 'FINISHED',
     partitions: [],
     pcbs: null } ]
@@ -290,6 +299,7 @@ exports[`test/job-schedule-degree-2.js TAP > dead | T7 1`] = `
     loadedTime: 0,
     finishedTime: 3,
     cyclingTime: 3,
+    time: 3,
     state: 'FINISHED',
     partitions: [],
     pcbs: null },
@@ -301,6 +311,7 @@ exports[`test/job-schedule-degree-2.js TAP > dead | T7 1`] = `
     loadedTime: 0,
     finishedTime: 5,
     cyclingTime: 5,
+    time: 2,
     state: 'FINISHED',
     partitions: [],
     pcbs: null },
@@ -312,6 +323,7 @@ exports[`test/job-schedule-degree-2.js TAP > dead | T7 1`] = `
     loadedTime: 3,
     finishedTime: 7,
     cyclingTime: 7,
+    time: 2,
     state: 'FINISHED',
     partitions: [],
     pcbs: null } ]

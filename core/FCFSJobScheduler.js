@@ -53,12 +53,15 @@ class FCFSJobScheduler {
    */
   run(time) {
     return this.psScheduler.run(time, (newTime, pcb) => {
-      if (pcb && pcb.job.isFinished()) {
-        const { job } = pcb
-        job.kill()
-        job.finishedTime = newTime
-        job.cyclingTime = newTime - job.arriveTime
-        this.removeJob(job)
+      if (pcb) {
+        pcb.job.time += newTime - time
+        if (pcb.job.isFinished()) {
+          const { job } = pcb
+          job.kill()
+          job.cyclingTime = newTime - job.arriveTime
+          job.finishedTime = newTime
+          this.removeJob(job)
+        }
       }
       this.loadJob(newTime)
       return newTime
