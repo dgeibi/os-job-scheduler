@@ -105,6 +105,7 @@ class MemPartition {
   }
 }
 
+/** 不可切割分区的大小 */
 MemPartition.minsize = 1
 
 MemPartition.stateType = {
