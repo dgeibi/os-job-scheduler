@@ -30,7 +30,9 @@ class JCB {
 
   alloc(part, size) {
     if (part.size - size <= MemPartition.minsize) {
+      // 差小于最小块时
       this.partitions.push(part.remove(this))
+      this.memSize = part.size
     } else {
       this.partitions.push(part.slice(size, this))
     }
