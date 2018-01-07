@@ -3,9 +3,10 @@ import { Button, Table, Tag, Row, Col } from 'antd'
 
 import { connect } from 'redux-zero/react'
 import shallowEqual from 'fbjs/lib/shallowEqual'
-import styled from 'react-emotion'
 
+import Heading from './component/Heading'
 import JobScheduler from '../core/FCFSJobScheduler'
+import Partition from './Partition'
 
 const loadedJobsColumns = [
   { key: 'jid', title: '作业名', dataIndex: 'jid' },
@@ -63,9 +64,6 @@ const deadJobsColumns = [
     dataIndex: 'cyclingTime',
   },
 ]
-const H3 = styled.h3`
-  margin-top: 16px;
-`
 
 class View extends Component {
   constructor(props, context) {
@@ -185,14 +183,16 @@ class View extends Component {
           <Col span={6}>系统运行时间：{time}</Col>
           <Col span={6}>内存中的作业数：{scheduler.runningCnt}</Col>
         </Row>
-        <H3>已装入的作业</H3>
+        <Heading>空闲内存</Heading>
+        <Partition head={scheduler.memoryHolder.memory} maxSize={scheduler.maxMemSize} />
+        <Heading>已装入的作业</Heading>
         <Table
           pagination={false}
           rowKey="jid"
           dataSource={loadedJobs}
           columns={loadedJobsColumns}
         />
-        <H3>已完成的作业</H3>
+        <Heading>已完成的作业</Heading>
         <Table
           pagination={false}
           rowKey="jid"

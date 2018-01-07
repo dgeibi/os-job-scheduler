@@ -30,18 +30,19 @@ class FCFSJobScheduler {
     /** @type {RRProcessScheduler} 进程调度器 */
     this.psScheduler = new RRProcessScheduler(rrSlice)
 
+    /** @type {number} 内存大小 */
+    this.maxMemSize = maybeUndefined(maxMemSize, 640)
+    this.checkJobsMemory()
     this.memoryHolder = {}
     this.memoryHolder.memory = new MemPartition({
-      size: maybeUndefined(maxMemSize, 640),
+      size: this.maxMemSize,
       holder: this.memoryHolder,
     })
-
-    this.checkJobsMemory()
   }
 
   checkJobsMemory() {
     this.pending.forEach(job => {
-      if (job.memSize >= this.memoryHolder.memory.size) {
+      if (job.memSize >= this.maxMemSize) {
         throw Error(`job ${job.jid} memSize too large`)
       }
     })
