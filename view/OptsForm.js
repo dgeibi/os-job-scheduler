@@ -4,6 +4,7 @@ import { connect } from 'redux-zero/react'
 
 import * as validators from './utils/validators'
 import pick from './utils/pick'
+import Heading from './component/Heading'
 
 const FormItem = Form.Item
 
@@ -196,6 +197,7 @@ class OptsForm extends Component {
   render() {
     return (
       <Form onSubmit={this.handleSearch}>
+        <Heading>配置</Heading>
         <Row gutter={24}>{this.getSchedulerFields()}</Row>
         <Row gutter={24}>
           <Col span={8}>作业到达时间：</Col>
