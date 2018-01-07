@@ -184,7 +184,7 @@ class View extends Component {
           <Col span={6}>内存中的作业数：{scheduler.runningCnt}</Col>
         </Row>
         <Heading>空闲内存</Heading>
-        <h4>采用连续动态分区分配，不可切割分区的大小为 1</h4>
+        <h4>采用连续分配方式的动态分区分配，不可切割分区的大小为 1</h4>
         <Partition head={scheduler.memoryHolder.memory} maxSize={scheduler.maxMemSize} />
         <Heading>已装入的作业</Heading>
         <Table
