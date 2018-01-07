@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "dgeibi/react",
+    "prettier"
+  ],
+  "rules": {
+    "global-require": "off",
+    "import/no-extraneous-dependencies": "off"
+  }
+}

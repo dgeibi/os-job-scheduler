@@ -1,0 +1,52 @@
+{
+  "name": "os-job-scheduler",
+  "version": "1.0.0",
+  "description": "模拟实现一个简单的操作系统",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": " tap \"test/*.js\"",
+    "format": "prettier --write \"*.js\"",
+    "lint": "eslint .",
+    "dev": "poi",
+    "build": "poi build",
+    "analyze": "poi build --bundle-report",
+    "precommit": "lint-staged"
+  },
+  "author": "dgeibi",
+  "license": "ISC",
+  "devDependencies": {
+    "@easyops/git-exec-and-restage": "^1.0.4",
+    "babel-eslint": "^8.1.2",
+    "babel-plugin-emotion": "^8.0.12",
+    "babel-plugin-import": "^1.6.3",
+    "babel-preset-react-app": "^3.1.0",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-dgeibi": "^4.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-react": "^7.5.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "poi": "^9.6.4",
+    "poi-preset-bundle-report": "^2.0.2",
+    "poi-preset-react": "^9.2.1",
+    "prettier": "^1.9.2",
+    "tap": "^11.0.1"
+  },
+  "dependencies": {
+    "antd": "^3.1.0",
+    "emotion": "^8.0.12",
+    "fbjs": "^0.8.16",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-emotion": "^8.0.12",
+    "redux-zero": "^4.8.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "git-exec-and-restage prettier --write --"
+    ]
+  }
+}
