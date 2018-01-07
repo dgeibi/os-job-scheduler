@@ -72,6 +72,7 @@ class View extends Component {
     super(props, context)
     this.state = {
       time: 0,
+      timeoutId: null,
     }
     if (props.opts) {
       this.loadScheduler(props.opts)
@@ -93,6 +94,7 @@ class View extends Component {
           time: 0,
         })
       }
+      this.cancelContinuousRun()
     }
   }
 
@@ -105,9 +107,45 @@ class View extends Component {
     }
   }
 
+  continuousRun = () => {
+    const { scheduler } = this
+    if (scheduler && !scheduler.isQueueEmpty()) {
+      const time = scheduler.run(this.state.time)
+      const ended = scheduler.isQueueEmpty()
+      const timeoutId = ended ? null : setTimeout(this.continuousRun, 700)
+      this.setState({
+        timeoutId,
+        time,
+      })
+    }
+  }
+
+  cancelContinuousRun() {
+    if (this.state.timeoutId) {
+      clearTimeout(this.state.timeoutId)
+      this.setState({
+        timeoutId: null,
+      })
+    }
+  }
+
+  toggleContinuousRun = () => {
+    if (this.state.timeoutId) {
+      this.cancelContinuousRun()
+    } else {
+      this.continuousRun()
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.state.timeoutId) {
+      clearTimeout(this.state.timeoutId)
+    }
+  }
+
   render() {
     const { scheduler } = this
-    const { time } = this.state
+    const { time, timeoutId } = this.state
     if (!scheduler) return null
     const ended = scheduler.isQueueEmpty()
     const loadedJobs = scheduler.arrived.filter(x => x.isRunning())
@@ -118,8 +156,15 @@ class View extends Component {
           marginTop: '16px',
         }}
       >
-        <Button type="primary" onClick={this.tick} disabled={ended}>
-          下一刻
+        <Button
+          type={timeoutId ? 'danger' : 'primary'}
+          onClick={this.toggleContinuousRun}
+          disabled={ended}
+        >
+          {timeoutId ? '暂停运行' : '自动运行'}
+        </Button>{' '}
+        <Button onClick={this.tick} disabled={ended || timeoutId}>
+          手动执行
         </Button>
         <Row
           css={{
@@ -128,7 +173,14 @@ class View extends Component {
           gutter={12}
         >
           <Col span={3}>
-            {ended ? <Tag color="red">已关机</Tag> : <Tag color="green">正在运行</Tag>}
+            {timeoutId ? (
+              <Tag color="green">运行中</Tag>
+            ) : (
+              <Tag color="orange">暂停中</Tag>
+            )}
+          </Col>
+          <Col span={3}>
+            {ended ? <Tag color="red">已关机</Tag> : <Tag color="blue">已启动</Tag>}
           </Col>
           <Col span={6}>系统运行时间：{time}</Col>
           <Col span={6}>内存中的作业数：{scheduler.runningCnt}</Col>
