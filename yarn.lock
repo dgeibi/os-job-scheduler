@@ -595,6 +595,34 @@
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/@std/esm/-/esm-0.19.1.tgz#8bdf8ed0e759eea1c7010d22fb9789e462ec0a9b"
 
+"@types/node@*":
+  version "8.5.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.5.7.tgz#9c498c35af354dcfbca3790fb2e81129e93cf0e2"
+
+"@types/tapable@*":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-0.2.4.tgz#8181a228da46185439300e600c5ae3b3b3982585"
+
+"@types/uglify-js@*":
+  version "2.6.30"
+  resolved "https://registry.yarnpkg.com/@types/uglify-js/-/uglify-js-2.6.30.tgz#257d2b6dd86673d60da476680fba90f2e30c6eef"
+  dependencies:
+    source-map "^0.6.1"
+
+"@types/webpack-chain@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@types/webpack-chain/-/webpack-chain-4.0.0.tgz#637c3936510da9bd435b76577a6f93dac3c5b657"
+  dependencies:
+    "@types/webpack" "*"
+
+"@types/webpack@*", "@types/webpack@^3.8.2":
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-3.8.2.tgz#489276aa101b8364fa444f358e7c220a65c2cc66"
+  dependencies:
+    "@types/node" "*"
+    "@types/tapable" "*"
+    "@types/uglify-js" "*"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -5953,14 +5981,14 @@ poi-dev-utils@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/poi-dev-utils/-/poi-dev-utils-1.0.1.tgz#c3089d1db60e9d2c56343decc6a3b9647d577c14"
 
-poi-load-config@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/poi-load-config/-/poi-load-config-1.1.5.tgz#0236f11e91dc93fdf8893fd12b592bd11ea06c8a"
+poi-load-config@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/poi-load-config/-/poi-load-config-1.1.6.tgz#54eb1febf54a0caf2e5f108714d15db6325b45a9"
   dependencies:
     babel-core "^6.24.1"
     babel-load-config "^1.0.0"
     postcss-load-config "^1.2.0"
-    use-config "^1.1.0"
+    use-config "^2.0.0"
 
 poi-preset-bundle-report@^2.0.2:
   version "2.0.2"
@@ -5972,10 +6000,12 @@ poi-webpack-node-externals@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/poi-webpack-node-externals/-/poi-webpack-node-externals-2.0.0.tgz#3e23ae0673705f5f44b23ecd194b85c724de91fa"
 
-poi@^9.6.4:
-  version "9.6.10"
-  resolved "https://registry.yarnpkg.com/poi/-/poi-9.6.10.tgz#95a6659c6af5d2c99e3b7e880a74b15d107110b2"
+poi@^9.6.12:
+  version "9.6.12"
+  resolved "https://registry.yarnpkg.com/poi/-/poi-9.6.12.tgz#a97bef16be6d20b042639d654029ed4468cf6f4e"
   dependencies:
+    "@types/webpack" "^3.8.2"
+    "@types/webpack-chain" "^4.0.0"
     address "^1.0.1"
     autoprefixer "^7.1.2"
     babel-core "^6.24.1"
@@ -5984,7 +6014,7 @@ poi@^9.6.4:
     cac "^4.0.0"
     case-sensitive-paths-webpack-plugin "^2.0.0"
     chalk "^2.0.1"
-    chokidar "^1.7.0"
+    chokidar "^2.0.0"
     clipboardy "^1.1.2"
     co "^4.6.0"
     copy-webpack-plugin "^4.0.1"
@@ -6003,7 +6033,7 @@ poi@^9.6.4:
     opn "^5.0.0"
     parse-json-config "^0.2.0"
     poi-dev-utils "^1.0.1"
-    poi-load-config "^1.1.5"
+    poi-load-config "^1.1.6"
     poi-webpack-node-externals "^2.0.0"
     post-compile-webpack-plugin "^0.1.1"
     postcss-loader "^2.0.6"
@@ -6021,7 +6051,7 @@ poi@^9.6.4:
     webpack-dev-server "^2.9.2"
     webpack-handle-css-loader "^2.0.1"
     webpack-merge "^4.1.0"
-    yargs "^9.0.1"
+    yargs "^10.0.0"
     yarn-global "^1.1.0"
 
 portfinder@^1.0.9:
@@ -6371,10 +6401,6 @@ progress@^2.0.0:
 promise-inflight@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/promise-inflight/-/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
-
-promise.series@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/promise.series/-/promise.series-0.2.0.tgz#2cc7ebe959fc3a6619c04ab4dbdc9e452d864bbd"
 
 promise@^7.1.1:
   version "7.3.1"
@@ -8340,13 +8366,12 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
-use-config@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/use-config/-/use-config-1.1.0.tgz#0a0c7760e1f12cd546154fc67afefe49d048fbb4"
+use-config@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/use-config/-/use-config-2.0.2.tgz#137fb6290e884efdbe29963c417ffc2b333465c0"
   dependencies:
     load-json-file "^2.0.0"
     path-exists "^3.0.0"
-    promise.series "^0.2.0"
     pupa "^1.0.0"
 
 use@^2.0.0:
@@ -8746,7 +8771,7 @@ yargs-parser@^8.0.0:
   dependencies:
     camelcase "^4.1.0"
 
-yargs@^10.0.3:
+yargs@^10.0.0, yargs@^10.0.3:
   version "10.0.3"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-10.0.3.tgz#6542debd9080ad517ec5048fb454efe9e4d4aaae"
   dependencies:
@@ -8766,24 +8791,6 @@ yargs@^10.0.3:
 yargs@^8.0.2:
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-8.0.2.tgz#6299a9055b1cefc969ff7e79c1d918dceb22c360"
-  dependencies:
-    camelcase "^4.1.0"
-    cliui "^3.2.0"
-    decamelize "^1.1.1"
-    get-caller-file "^1.0.1"
-    os-locale "^2.0.0"
-    read-pkg-up "^2.0.0"
-    require-directory "^2.1.1"
-    require-main-filename "^1.0.1"
-    set-blocking "^2.0.0"
-    string-width "^2.0.0"
-    which-module "^2.0.0"
-    y18n "^3.2.1"
-    yargs-parser "^7.0.0"
-
-yargs@^9.0.1:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-9.0.1.tgz#52acc23feecac34042078ee78c0c007f5085db4c"
   dependencies:
     camelcase "^4.1.0"
     cliui "^3.2.0"
