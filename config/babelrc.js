@@ -13,6 +13,7 @@ if (options === null) {
   throw Error('.babelrc(.js) not found')
 }
 
+options.cacheDirectory = true
 options.babelrc = false
 
 module.exports = options
