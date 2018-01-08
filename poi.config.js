@@ -7,9 +7,9 @@ module.exports = {
   },
   staticFolder: 'public',
   presets: [
-    require('poi-preset-react')(),
     require('poi-preset-bundle-report')(),
-    require('./config/poi-preset/dev-sourcemap')('cheap-module-source-map'),
+    require('./config/poi-preset-dev-sourcemap')('cheap-module-source-map'),
   ],
   clear: false,
+  babel: require('./config/babelrc'),
 }

@@ -4,6 +4,7 @@ import { Provider } from 'redux-zero/react'
 import store from './store'
 import OptsForm from './OptsForm'
 import View from './View'
+import hot from './utils/hot'
 
 const App = () => (
   <Provider store={store}>
@@ -14,4 +15,4 @@ const App = () => (
   </Provider>
 )
 
-export default App
+export default hot(module)(App)
