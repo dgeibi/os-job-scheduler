@@ -1,5 +1,5 @@
-const MemPartition = require('./MemPartition')
-const { maybeUndefined } = require('./util')
+import MemPartition from './MemPartition'
+import { maybeUndefined } from './util'
 
 let uuJID = 0
 function getJID() {
@@ -94,4 +94,4 @@ JCB.stateType = {
   FINISHED: 'FINISHED',
 }
 
-module.exports = JCB
+export default JCB

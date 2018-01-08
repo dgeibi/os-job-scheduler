@@ -1,5 +1,5 @@
-const tap = require('tap')
-const JobScheduler = require('../core/FCFSJobScheduler')
+import tap from 'tap'
+import JobScheduler from '../core/FCFSJobScheduler'
 
 tap.throws(() => {
   // eslint-disable-next-line

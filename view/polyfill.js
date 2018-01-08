@@ -1,0 +1,8 @@
+import 'core-js/modules/es6.object.assign'
+import 'core-js/modules/es6.symbol'
+import 'core-js/modules/es6.object.set-prototype-of'
+import 'core-js/modules/es6.number.is-nan'
+import 'core-js/modules/es6.number.is-integer'
+import 'core-js/modules/es6.set'
+import 'core-js/modules/es6.map'
+import 'core-js/modules/es6.weak-map'

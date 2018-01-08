@@ -1,4 +1,4 @@
-const { maybeUndefined } = require('./util')
+import { maybeUndefined } from './util'
 
 let uupid = 0
 function getPid() {
@@ -51,4 +51,4 @@ PCB.stateType = {
   FINISH: 'FINISHED',
 }
 
-module.exports = PCB
+export default PCB

@@ -1,5 +1,5 @@
-const PCB = require('./PCB')
-const { repeat } = require('./util')
+import { repeat } from './util'
+import PCB from './PCB'
 
 class RRProcessScheduler {
   constructor(sliceNum = 3) {
@@ -58,4 +58,4 @@ class RRProcessScheduler {
   }
 }
 
-module.exports = RRProcessScheduler
+export default RRProcessScheduler

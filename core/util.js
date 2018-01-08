@@ -1,7 +1,7 @@
-exports.maybeUndefined = (value, fallback) =>
+export const maybeUndefined = (value, fallback) =>
   value === undefined ? (typeof fallback === 'function' ? fallback() : fallback) : value
 
-exports.repeat = function repeat(time, fn) {
+export const repeat = function repeat(time, fn) {
   let cnt = 0
   const rets = []
   while (cnt < time) {

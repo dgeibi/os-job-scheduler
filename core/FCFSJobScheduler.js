@@ -1,8 +1,8 @@
-const JCB = require('./JCB')
-const PCB = require('./PCB')
-const RRProcessScheduler = require('./RRProcessScheduler')
-const MemPartition = require('./MemPartition')
-const { maybeUndefined } = require('./util')
+import JCB from './JCB'
+import PCB from './PCB'
+import RRProcessScheduler from './RRProcessScheduler'
+import MemPartition from './MemPartition'
+import { maybeUndefined } from './util'
 
 class FCFSJobScheduler {
   constructor({ jcbs, degree, rrSlice, maxMemSize } = {}) {
@@ -119,4 +119,4 @@ class FCFSJobScheduler {
   }
 }
 
-module.exports = FCFSJobScheduler
+export default FCFSJobScheduler

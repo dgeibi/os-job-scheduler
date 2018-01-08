@@ -1,5 +1,5 @@
-const JobScheduler = require('../core/FCFSJobScheduler')
-const testJobScheduler = require('../test-helpers/testJobScheduler')
+import JobScheduler from '../core/FCFSJobScheduler'
+import testJobScheduler from '../test-helpers/testJobScheduler'
 
 const scheduler = new JobScheduler({
   jcbs: [

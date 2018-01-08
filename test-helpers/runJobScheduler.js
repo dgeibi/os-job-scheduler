@@ -1,4 +1,4 @@
-module.exports = function runJobScheduler(scheduler, step) {
+export default function runJobScheduler(scheduler, step) {
   let time = 0
 
   scheduler.loadJob(time)

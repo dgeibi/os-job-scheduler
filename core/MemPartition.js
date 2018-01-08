@@ -1,4 +1,4 @@
-const { maybeUndefined } = require('./util')
+import { maybeUndefined } from './util'
 
 class MemPartition {
   constructor({ address, size, next, prev, job, state, holder } = {}) {
@@ -117,4 +117,4 @@ MemPartition.memory = new MemPartition({
   size: 640,
 })
 
-module.exports = MemPartition
+export default MemPartition

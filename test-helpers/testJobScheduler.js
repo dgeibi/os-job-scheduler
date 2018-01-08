@@ -1,7 +1,7 @@
-const tap = require('tap')
-const runJobScheduler = require('./runJobScheduler')
+import tap from 'tap'
+import runJobScheduler from './runJobScheduler'
 
-module.exports = function testJobScheduler(scheduler) {
+export default function testJobScheduler(scheduler) {
   return runJobScheduler(scheduler, time => {
     tap.matchSnapshot(scheduler.arrived, `arrived | T${time}`)
     tap.matchSnapshot(scheduler.dead, `dead | T${time}`)

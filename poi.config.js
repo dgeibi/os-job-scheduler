@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  entry: 'view/index.js',
+  entry: ['view/polyfill.js', 'view/index.js'],
   html: {
     template: path.resolve('public', 'index.html'),
   },
@@ -11,4 +11,5 @@ module.exports = {
     require('poi-preset-bundle-report')(),
     require('./config/poi-preset/dev-sourcemap')('cheap-module-source-map'),
   ],
+  clear: false,
 }
