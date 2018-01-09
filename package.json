@@ -11,7 +11,7 @@
     "dev": "poi",
     "build": "poi build",
     "analyze": "poi build --bundle-report",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged && npm test"
   },
   "@std/esm": "cjs",
   "browserslist": [
@@ -58,6 +58,7 @@
   },
   "lint-staged": {
     "*.js": [
+      "eslint",
       "git-exec-and-restage prettier --write --"
     ]
   }
