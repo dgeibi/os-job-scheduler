@@ -11,5 +11,8 @@ module.exports = {
     require('./config/poi-preset-dev-sourcemap')('cheap-module-source-map'),
   ],
   clear: false,
-  babel: require('./config/babelrc'),
+  babel: require('./config/loadBabelrc')({
+    cacheDirectory: true,
+    babelrc: false,
+  }),
 }
