@@ -21,10 +21,10 @@
   "author": "dgeibi",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.36",
-    "@babel/preset-env": "^7.0.0-beta.36",
-    "@babel/preset-react": "^7.0.0-beta.36",
-    "@babel/preset-stage-3": "^7.0.0-beta.36",
+    "@babel/core": "^7.0.0-beta.37",
+    "@babel/preset-env": "^7.0.0-beta.37",
+    "@babel/preset-react": "^7.0.0-beta.37",
+    "@babel/preset-stage-3": "^7.0.0-beta.37",
     "@easyops/git-exec-and-restage": "^1.0.4",
     "@std/esm": "^0.19.1",
     "babel-core": "^7.0.0-bridge.0",
@@ -46,7 +46,7 @@
     "tap": "^11.0.1"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0-beta.36",
+    "@babel/polyfill": "^7.0.0-beta.37",
     "antd": "^3.1.0",
     "emotion": "^8.0.12",
     "fbjs": "^0.8.16",
