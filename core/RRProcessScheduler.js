@@ -29,19 +29,22 @@ class RRProcessScheduler {
     proc.stop()
 
     // 若进程已完成，则计算周转时间并移入死亡列队
-    if (proc.state === PCB.stateType.FINISH) {
-      proc.cyclingTime = newTime - proc.arriveTime
-      proc.finishedTime = newTime
+    if (proc.isFinished()) {
+      proc.recordTime(newTime)
       this.dead.push(this.removePS(proc))
     }
 
     const ret = callback(newTime, proc)
 
     if (proc.state === PCB.stateType.WAIT) {
-      this.ready.push(this.ready.shift())
+      this.roundRobin()
     }
 
     return ret
+  }
+
+  roundRobin() {
+    this.ready.push(this.ready.shift())
   }
 
   loadPS(x) {

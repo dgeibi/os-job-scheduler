@@ -58,9 +58,7 @@ class FCFSJobScheduler {
         pcb.job.time += newTime - time
         if (pcb.job.isFinished()) {
           const { job } = pcb
-          job.kill()
-          job.cyclingTime = newTime - job.arriveTime
-          job.finishedTime = newTime
+          job.kill(newTime)
           this.removeJob(job)
         }
       }

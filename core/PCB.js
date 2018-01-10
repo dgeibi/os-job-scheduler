@@ -40,8 +40,13 @@ class PCB {
     return this.state === PCB.stateType.FINISH
   }
 
-  kill() {
+  unlinkJCB() {
     this.job = null
+  }
+
+  recordTime(time) {
+    this.cyclingTime = time - this.arriveTime
+    this.finishedTime = time
   }
 }
 

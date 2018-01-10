@@ -81,10 +81,20 @@ class JCB {
     return this.state === JCB.stateType.RUNNING
   }
 
-  kill() {
+  kill(time) {
     this.release()
-    this.pcbs.forEach(x => x.kill())
+    this.unlinkPCBs()
+    this.recordTime(time)
+  }
+
+  unlinkPCBs() {
+    this.pcbs.forEach(x => x.unlinkJCB())
     this.pcbs = null
+  }
+
+  recordTime(time) {
+    this.cyclingTime = time - this.arriveTime
+    this.finishedTime = time
   }
 }
 
