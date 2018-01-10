@@ -62,7 +62,9 @@ class FCFSJobScheduler {
           this.removeJob(job)
         }
       }
-      this.loadJob(newTime)
+      for (let t = time + 1; t <= newTime; t++) {
+        this.loadJob(t)
+      }
       return newTime
     })
   }
