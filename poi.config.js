@@ -9,6 +9,7 @@ module.exports = {
   presets: [
     require('poi-preset-bundle-report')(),
     require('./config/poi-preset-dev-sourcemap')('cheap-module-source-map'),
+    require('./config/poi-preset-prod-publicPath')(''),
   ],
   clear: false,
   babel: require('./config/loadBabelrc')({
